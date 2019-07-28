@@ -1,3 +1,19 @@
-<h1>Home</h1>
+<!-- Class will be attached only if a h1Style boolean is == true  -->
+<!-- <h1 [class.gray]= "h1Style">Home</h1> -->
+
+<!-- =============================== -->
+<!-- if we want to control more than one class then we use ngClass -->
+<!-- <h1 [ngClass]= "{
+  'gray':h1Style,
+  'large': !h1Style
+}">Home</h1> -->
+
+<!-- is we wanna change via style inscted of class -->
+<!-- <h1 [style.color]= "h1Style ? 'gray': 'black'">Home</h1> -->
+<!-- option with ngStyle -->
+<h1 [ngStyle]= "{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': !h1Style ? '1em' : '4em'
+ }">Home</h1>
 
 <button (click)="firstClick()">Click me</button>
